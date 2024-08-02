@@ -33,6 +33,8 @@ class Certidao:
         self.navegador.find_elements(By.CLASS_NAME, 'multiselect__tags')[0].click()
         self.navegador.find_elements(By.CLASS_NAME, 'multiselect__tags')[0].click()
         self.navegador.find_element(By.ID, 'adopt-accept-all-button').click()
+        time.sleep(2)
+        
         lista = self.navegador.find_elements(By.TAG_NAME,'span')
         for va in lista:
             if va.text.find('São Paulo')>-1:
@@ -92,6 +94,7 @@ class Certidao:
         self.navegador.get(f"https://registrocivil.org.br/marriage-certificate")
         self.navegador.find_elements(By.CLASS_NAME, 'multiselect__tags')[0].click()
         self.navegador.find_elements(By.CLASS_NAME, 'multiselect__tags')[0].click()
+        time.sleep(2)
         self.navegador.find_element(By.ID, 'adopt-accept-all-button').click()
         lista = self.navegador.find_elements(By.TAG_NAME,'span')
         for va in lista:
@@ -132,6 +135,7 @@ class Certidao:
         self.navegador.get(f"https://registrocivil.org.br/death-certificate")
         self.navegador.find_elements(By.CLASS_NAME, 'multiselect__tags')[0].click()
         self.navegador.find_elements(By.CLASS_NAME, 'multiselect__tags')[0].click()
+        time.sleep(2)
         self.navegador.find_element(By.ID, 'adopt-accept-all-button').click()
         lista = self.navegador.find_elements(By.TAG_NAME,'span')
         for va in lista:
